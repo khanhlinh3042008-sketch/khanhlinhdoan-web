@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Trang của Linh 🌿</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: #f1f8f4;
+      color: #2e4d3a;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    header {
+      background: linear-gradient(to right, #a8d5ba, #cdeed9);
+      padding: 40px 20px;
+      border-bottom-left-radius: 40px;
+      border-bottom-right-radius: 40px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 32px;
+    }
+
+    .avatar {
+      margin-top: 20px;
+      width: 170px;
+      height: 170px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid white;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .section {
+      margin: 40px;
+    }
+
+    .info-box {
+      background: #dff3e3;
+      padding: 20px;
+      border-radius: 20px;
+      width: 60%;
+      margin: 20px auto;
+      text-align: left;
+      line-height: 1.8;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    }
+
+    .gallery {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .gallery img {
+      width: 260px;
+      border-radius: 20px;
+      margin: 15px;
+      transition: 0.3s;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    .quote {
+      background: #dff3e3;
+      padding: 20px;
+      border-radius: 20px;
+      font-style: italic;
+      margin: 30px auto;
+      width: 60%;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding: 20px;
+      background: #a8d5ba;
+      border-top-left-radius: 30px;
+      border-top-right-radius: 30px;
+    }
+
+    /* 💚 Tim bay */
+    .heart {
+      position: fixed;
+      bottom: -10px;
+      color: #ff6b81;
+      font-size: 20px;
+      animation: floatUp 5s linear infinite;
+    }
+
+    @keyframes floatUp {
+      0% { transform: translateY(0); opacity: 1; }
+      100% { transform: translateY(-100vh); opacity: 0; }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- 🎵 Nhạc nền -->
+<audio autoplay loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<header>
+  <h1>Hi, mình là Linh 🌿</h1>
+  <p>Welcome to my little world </p>
+  <img src="avatar.jpg" class="avatar">
+</header>
+
+<div class="section">
+  <h2>🌼 Giới thiệu</h2>
+  <p>
+    Mình là Khánh Linh 
+    Mình thích nghe nhạc, đọc sách và làm bánh 🍰
+  </p>
+</div>
+
+<div class="section">
+  <h2>💚 Thông tin cá nhân</h2>
+  <div class="info-box">
+    <p><strong>Họ và tên:</strong> ĐOÀN KHÁNH LINH</p>
+    <p><strong>Ngày sinh:</strong> 30/04/2008</p>
+    <p><strong>Cung hoàng đạo:</strong> Kim Ngưu ♉️</p>
+    <p><strong>Trường:</strong> THPT Lê Quý Đôn - Hà Đông</p>
+    <p><strong>Lớp:</strong> 12A12</p>
+    <p><strong>Sở thích:</strong> Nghe nhạc, đọc sách, làm bánh</p>
+</div>
+</div>
+
+<div class="section">
+  <h2>📸 Ảnh của mình</h2>
+  <div class="gallery">
+    <img src="anh1.jpg">
+  </div>
+</div>
+
+<div class="quote">
+  "Be a little better every day 🌱"
+</div>
+
+<footer>
+  <p>Made with 💚 by Linh</p>
+</footer>
+
+<script>
+  function createHeart() {
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML = "💚";
+
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = (10 + Math.random() * 20) + "px";
+    heart.style.animationDuration = (3 + Math.random() * 2) + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+      heart.remove();
+    }, 5000);
+  }
+
+  setInterval(createHeart, 300);
+</script>
+
+</body>
+</html>
