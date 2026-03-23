@@ -25,7 +25,7 @@
       margin: 0;
       font-size: 32px;
     }
-    
+
     .avatar {
       margin-top: 20px;
       width: 170px;
@@ -105,63 +105,42 @@
 <body>
 
 <!-- 🎵 Nhạc nền -->
-<audio id="bg-music" loop>
+<audio autoplay loop>
   <source src="music.mp3" type="audio/mpeg">
 </audio>
 
-<button onclick="playMusic()" style="
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #a8d5ba;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 20px;
-  cursor: pointer;
-">
-  🎵 Bật nhạc
-</button>
-
-<script>
-  function playMusic() {
-    document.getElementById("bg-music").play();
-  }
-</script>
-  <source src="music.mp3" type="audio/mpeg">
-</audio>
+<header>
+  <h1>Hi, mình là Linh 🌿</h1>
+  <p>Welcome to my little matcha world 🍵</p>
+  <img src="avatar.jpg" class="avatar">
+</header>
 
 <div class="section">
-  <button onclick="toggleSection('gioithieu')">🌼 Giới thiệu</button>
-  <div id="gioithieu" style="display:none;">
-    <p>
-      Mình là Linh 
-      Mình thích nghe nhạc, đọc sách và làm bánh 🍰
-    </p>
-  </div>
+  <h2>🌼 Giới thiệu</h2>
+  <p>
+    Mình là Linh – một người thích matcha, thích học tiếng Anh và đang cố gắng đạt band IELTS cao hơn ✨  
+    Mình thích nghe nhạc, đọc sách và làm bánh 🍰
+  </p>
 </div>
 
 <div class="section">
-  <button onclick="toggleSection('thongtin')">💚 Thông tin cá nhân</button>
-  <div id="thongtin" style="display:none;">
-    <div class="info-box">
-      <p><strong>Họ và tên:</strong> ĐOÀN KHÁNH LINH</p>
-      <p><strong>Ngày sinh:</strong> 30/04/2008</p>
-      <p><strong>Cung hoàng đạo:</strong> Kim Ngưu ♉️</p>
-      <p><strong>Trường:</strong> THPT Lê Quý Đôn - Hà Đông</p>
-      <p><strong>Lớp:</strong> 12A12</p>
-      <p><strong>Sở thích:</strong> Nghe nhạc, đọc sách, làm bánh</p>
+  <h2>💚 Thông tin cá nhân</h2>
+  <div class="info-box">
+    <p><strong>Họ và tên:</strong> ĐOÀN KHÁNH LINH</p>
+    <p><strong>Ngày sinh:</strong> 30/04/2008</p>
+    <p><strong>Cung hoàng đạo:</strong> Kim Ngưu ♉️</p>
+    <p><strong>Trường:</strong> THPT Lê Quý Đôn - Hà Đông</p>
+    <p><strong>Lớp:</strong> 12A12</p>
+    <p><strong>Sở thích:</strong> Nghe nhạc, đọc sách, làm bánh</p>
     </div>
-  </div>
 </div>
 
 <div class="section">
-  <button onclick="toggleSection('anh')">📸 Ảnh của mình</button>
-  <div id="anh" style="display:none;">
-    <div class="gallery">
+  <h2>📸 Ảnh của mình</h2>
+ <div class="gallery">
   <img src="anh1.jpg">
   <img src="anh2.jpg">
 </div>
-  </div>
 </div>
 
 <div class="quote">
@@ -191,17 +170,6 @@
 
   setInterval(createHeart, 300);
 </script>
-  
-<script>
-  function toggleSection(id) {
-    const section = document.getElementById(id);
-    if (section.style.display === "none") {
-      section.style.display = "block";
-    } else {
-      section.style.display = "none";
-    }
-  }
-</script>
-  
+
 </body>
 </html>
