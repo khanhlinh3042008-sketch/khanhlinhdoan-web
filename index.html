@@ -105,7 +105,28 @@
 <body>
 
 <!-- 🎵 Nhạc nền -->
-<audio autoplay loop>
+<audio id="bg-music" loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<button onclick="playMusic()" style="
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #a8d5ba;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+">
+  🎵 Bật nhạc
+</button>
+
+<script>
+  function playMusic() {
+    document.getElementById("bg-music").play();
+  }
+</script>
   <source src="music.mp3" type="audio/mpeg">
 </audio>
 
