@@ -130,36 +130,37 @@
   <source src="music.mp3" type="audio/mpeg">
 </audio>
 
-<header>
-  <h1>Hi, mình là Linh 🌿</h1>
-  <p>Welcome to my little world </p>
-  <img src="avatar.jpg" class="avatar">
-</header>
-
 <div class="section">
-  <h2>🌼 Giới thiệu</h2>
-  <p>
-    Mình là Khánh Linh 
-    Mình thích nghe nhạc, đọc sách và làm bánh 🍰
-  </p>
+  <button onclick="toggleSection('gioithieu')">🌼 Giới thiệu</button>
+  <div id="gioithieu" style="display:none;">
+    <p>
+      Mình là Linh 
+      Mình thích nghe nhạc, đọc sách và làm bánh 🍰
+    </p>
+  </div>
 </div>
 
 <div class="section">
-  <h2>💚 Thông tin cá nhân</h2>
-  <div class="info-box">
-    <p><strong>Họ và tên:</strong> ĐOÀN KHÁNH LINH</p>
-    <p><strong>Ngày sinh:</strong> 30/04/2008</p>
-    <p><strong>Cung hoàng đạo:</strong> Kim Ngưu ♉️</p>
-    <p><strong>Trường:</strong> THPT Lê Quý Đôn - Hà Đông</p>
-    <p><strong>Lớp:</strong> 12A12</p>
-    <p><strong>Sở thích:</strong> Nghe nhạc, đọc sách, làm bánh</p>
-</div>
+  <button onclick="toggleSection('thongtin')">💚 Thông tin cá nhân</button>
+  <div id="thongtin" style="display:none;">
+    <div class="info-box">
+      <p><strong>Họ và tên:</strong> ĐOÀN KHÁNH LINH</p>
+      <p><strong>Ngày sinh:</strong> 30/04/2008</p>
+      <p><strong>Cung hoàng đạo:</strong> Kim Ngưu ♉️</p>
+      <p><strong>Trường:</strong> THPT Lê Quý Đôn - Hà Đông</p>
+      <p><strong>Lớp:</strong> 12A12</p>
+      <p><strong>Sở thích:</strong> Nghe nhạc, đọc sách, làm bánh</p>
+    </div>
+  </div>
 </div>
 
 <div class="section">
-  <h2>📸 Ảnh của mình</h2>
-  <div class="gallery">
-    <img src="anh1.jpg">
+  <button onclick="toggleSection('anh')">📸 Ảnh của mình</button>
+  <div id="anh" style="display:none;">
+    <div class="gallery">
+  <img src="anh1.jpg">
+  <img src="anh2.jpg">
+</div>
   </div>
 </div>
 
@@ -190,6 +191,17 @@
 
   setInterval(createHeart, 300);
 </script>
-
+  
+<script>
+  function toggleSection(id) {
+    const section = document.getElementById(id);
+    if (section.style.display === "none") {
+      section.style.display = "block";
+    } else {
+      section.style.display = "none";
+    }
+  }
+</script>
+  
 </body>
 </html>
